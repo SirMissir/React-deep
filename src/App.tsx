@@ -1,22 +1,19 @@
 import React from 'react';
 import './App.css';
 import Accordion from "./components/Accordion/Accordion";
+import {Rating} from "./components/Rating/Rating";
 
-function hello(){
-
-    alert ('Hello IT-camasutra')
-};
-
-hello();
 
 function App() {
     console.log("App rendered")
     return (
-        <div className='app-wrapper'>
+        <div className=''>
             <AppTitle/>
-            <Rating/>
+            Article 1
+            <Rating value = {3}/>
             <Accordion/>
-            <Rating/>
+            Article 2
+            <Rating value = {4}/>
         </div>
     );
 }
@@ -29,26 +26,6 @@ function AppTitle () {
         </div>
 
     );
-}
-
-function Rating () {
-    console.log("Rating rendered")
-    return (
-        <div>
-            <Star/>
-            <Star/>
-            <Star/>
-            <Star/>
-    </div>
-
-    );
-}
-
-function Star(){
-    console.log("Star rendered")
-    return(
-        <div>Star</div>
-    )
 }
 
 
