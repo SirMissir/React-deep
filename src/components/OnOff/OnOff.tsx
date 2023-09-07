@@ -9,6 +9,7 @@ function OnOff (props:OnOffPropsType) {
     return <div>
         {props.value && <ChOn/>}
         {props.value && <ChOff/>}
+        {props.value && <ChOff/>}
     </div>
 }
 
