@@ -5,6 +5,7 @@ import {Rating} from "./components/Rating/Rating";
 import OnOff from "./components/OnOff/OnOff"
 import {MicroTasks} from "./components/MicroTasks/MicroTasks";
 import {ButtonClick} from "./components/MicroTasks/MicroTaskButton";
+import {State} from "./components/MicroTasks/UseState";
 
 
 
@@ -46,7 +47,8 @@ function App() {
             <OnOff value = {true} />
             <OnOff value = {false} />
             {/*<MicroTasks students = {students} topCars = {topCars}/>*/}
-            <ButtonClick/>
+            {/*<ButtonClick/>*/}
+            <State/>
         </div>
     );
 }
