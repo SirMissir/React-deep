@@ -1,14 +1,33 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import Accordion from "./components/Accordion/Accordion";
 import {Rating} from "./components/Rating/Rating";
-import OnOff from "./components/OnOff/OnOff";
+import OnOff from "./components/OnOff/OnOff"
+import {MicroTasks} from "./components/MicroTasks/MicroTasks";
+import {ButtonClick} from "./components/MicroTasks/MicroTaskButton";
 
 
 
 
 
 function App() {
+
+    let[students, setStudents] = useState([
+        {id: 1, name: "Kostya", age: 23},
+        {id: 2, name: "Sasha", age: 23},
+        {id: 3, name: "Sasha", age: 23},
+        {id: 4, name: "Sasha", age: 23},
+        {id: 5, name: "Kostya", age: 23}
+    ]);
+    // const topCars = [//MicroTask Map sprint 01
+    //     {manufacturer:'BMW', model:'m5cs'},
+    //     {manufacturer:'Mercedes', model:'e63s'},
+    //     {manufacturer:'Audi', model:'rs6'},
+    //     {manufacturer:'BMW', model:'m5cs'},
+    //     {manufacturer:'Mercedes', model:'e63s'},
+    //     {manufacturer:'Audi', model:'rs6'}
+    // ];
+
     console.log("App rendered")
     return (
         <div className=''>
@@ -26,6 +45,8 @@ function App() {
             <Rating value = {5}/>
             <OnOff value = {true} />
             <OnOff value = {false} />
+            {/*<MicroTasks students = {students} topCars = {topCars}/>*/}
+            <ButtonClick/>
         </div>
     );
 }
