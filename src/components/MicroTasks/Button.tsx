@@ -2,7 +2,7 @@ import React from "react";
 
 type NameButtonType = {
     name:string
-    callBack:(subscribe:string)=>void
+    callBack:()=>void
 }
 
 
