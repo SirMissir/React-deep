@@ -15,6 +15,10 @@ export function Money () {
         { banknots: 'RUBLS', value: 50, number: ' v1234567890' },
     ])
 
+
+
+
+
     let currentMoney =money;
     if(nameButton==='Dollars'){
         currentMoney=money.filter((filteredMoney)=>filteredMoney.banknots ==='Dollars')
@@ -27,7 +31,7 @@ export function Money () {
 
 
     const onClickFilterHandler=(nameButton: string)=>{
-        console.log(nameButton)
+
     }
     return(
         <>
