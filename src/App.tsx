@@ -7,6 +7,7 @@ import OnOff from "./components/OnOff/OnOff"
 // import {ButtonClick} from "./components/MicroTasks/MicroTaskButton";
 import {State} from "./components/MicroTasks/UseState";
 import {Money} from "./components/MicroTasks/ArrayMoneyUseState";
+import {MicroTaskInput} from "./components/MicroTasks/MicroTaskInput";
 
 
 
@@ -32,25 +33,26 @@ function App() {
 
     console.log("App rendered")
     return (
-        <div className=''>
+        <div className={'app-wrapper'}>
             {/*<PageTitle title = {"This is APP component !"}/>*/}
             {/*<PageTitle title = {"My friends"}/>*/}
             {/*Article 1*/}
             {/*<Rating value = {3}/>*/}
-            <Accordion titleValue = {"Menu"} collapsed = {true}/>
-            <Accordion titleValue = {"Users List"} collapsed = {false}/>
-            <Rating value = {0}/>
-            <Rating value = {1}/>
-            <Rating value = {2}/>
-            <Rating value = {3}/>
-            <Rating value = {4}/>
-            <Rating value = {5}/>
-            <OnOff value = {true} />
-            <OnOff value = {false} />
+            {/*<Accordion titleValue = {"Menu"} collapsed = {true}/>*/}
+            {/*<Accordion titleValue = {"Users List"} collapsed = {false}/>*/}
+            {/*<Rating value = {0}/>*/}
+            {/*<Rating value = {1}/>*/}
+            {/*<Rating value = {2}/>*/}
+            {/*<Rating value = {3}/>*/}
+            {/*<Rating value = {4}/>*/}
+            {/*<Rating value = {5}/>*/}
+            {/*<OnOff value = {true} />*/}
+            {/*<OnOff value = {false} />*/}
             {/*<MicroTasks students = {students} topCars = {topCars}/>*/}
             {/*<ButtonClick/>*/}
             {/*<State/>*/}
-            <Money/>
+            {/*<Money/>*/}
+            <MicroTaskInput/>
         </div>
     );
 }

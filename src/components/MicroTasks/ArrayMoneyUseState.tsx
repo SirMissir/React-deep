@@ -15,7 +15,6 @@ export function Money () {
         { banknots: 'RUBLS', value: 50, number: ' v1234567890' },
     ])
 
-            ЦВ
     const [filter,setFilter]=useState<FilterType>('All')
 
     let currentMoney =money;
@@ -53,15 +52,5 @@ export function Money () {
             </div>
 
         </>
-
-
-
-
     )
-
-
-
-
-
-
 }

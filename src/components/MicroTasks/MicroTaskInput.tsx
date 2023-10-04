@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
+import {FullInput} from "./FullInput";
 
-function MicroTaskInput() {
+export function MicroTaskInput() {
     let [message, setMessage] = useState([
         {message: 'message 1'},
         {message: 'message 2'},
@@ -9,11 +10,12 @@ function MicroTaskInput() {
 
     return(
         <div>
-            <div>
-                <input/>
-                <button>+</button>
-            </div>
-            {message.map((el: ,index) =>{
+            <FullInput/>
+            {/*<div>*/}
+            {/*    <input/>*/}
+            {/*    <button>+</button>*/}
+            {/*</div>*/}
+            {message.map((el,index: number) =>{
                 return (
                     <div key={index}>{el.message}</div>
                 )
