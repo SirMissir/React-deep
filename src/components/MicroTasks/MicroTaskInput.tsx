@@ -11,10 +11,6 @@ export function MicroTaskInput() {
     return(
         <div>
             <FullInput/>
-            {/*<div>*/}
-            {/*    <input/>*/}
-            {/*    <button>+</button>*/}
-            {/*</div>*/}
             {message.map((el,index: number) =>{
                 return (
                     <div key={index}>{el.message}</div>
