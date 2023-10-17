@@ -8,9 +8,14 @@ export function MicroTaskInput() {
         {message: 'message 3'},
     ])
 
+    let addMessage = () => {
+        console.log('input')
+    }
+
+
     return(
         <div>
-            <FullInput/>
+            <FullInput callBack={addMessage}/>
             {message.map((el,index: number) =>{
                 return (
                     <div key={index}>{el.message}</div>
