@@ -49,7 +49,7 @@ function App() {
             {/*<OnOff value = {true} />*/}
             {/*<OnOff value = {false} />*/}
             {/*<MicroTasks students = {students} topCars = {topCars}/>*/}
-            <ButtonClick/>
+            {/*<ButtonClick/>*/}
             {/*<State/>*/}
             {/*<Money/>*/}
             <MicroTaskInput/>

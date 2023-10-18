@@ -8,15 +8,16 @@ export function MicroTaskInput() {
         {message: 'message 3'},
     ])
 
-    let addMessage = () => {
-        console.log('input')
+    const addMessage = (title: string) => {
+        let newMessage = {message: title}
+        setMessage([newMessage,...message])
     }
 
 
-    return(
+    return (
         <div>
-            <FullInput callBack={addMessage}/>
-            {message.map((el,index: number) =>{
+            <FullInput addMessage={addMessage}/>
+            {message.map((el, index: number) => {
                 return (
                     <div key={index}>{el.message}</div>
                 )
