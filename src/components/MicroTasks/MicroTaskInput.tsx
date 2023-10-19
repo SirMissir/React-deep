@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import {FullInput} from "./FullInput";
+import ButtonTaskInput from "./ButtonTaskInput";
+import InputTaskInput from "./InputTaskInput";
 
 export function MicroTaskInput() {
     let [message, setMessage] = useState([
@@ -14,9 +16,13 @@ export function MicroTaskInput() {
     }
 
 
+    // @ts-ignore
     return (
         <div>
-            <FullInput addMessage={addMessage}/>
+            <InputTaskInput/>
+            <ButtonTaskInput name={'+'} CallBack={()=>{}}/>
+
+            {/*<FullInput addMessage={addMessage}/>*/}
             {message.map((el, index: number) => {
                 return (
                     <div key={index}>{el.message}</div>
