@@ -10,19 +10,23 @@ export function MicroTaskInput() {
         {message: 'message 3'},
     ])
 
+    let [title,setTitle] = useState('')
+
     const addMessage = (title: string) => {
         let newMessage = {message: title}
         setMessage([newMessage,...message])
+        setTitle('')
     }
 
 
     // @ts-ignore
     return (
         <div>
-            <InputTaskInput/>
-            <ButtonTaskInput name={'+'} CallBack={()=>{}}/>
-
+            <InputTaskInput setTitle={setTitle} title={title}/>
+            <ButtonTaskInput name={'+'} CallBack={()=>addMessage(title)}/>
             {/*<FullInput addMessage={addMessage}/>*/}
+
+
             {message.map((el, index: number) => {
                 return (
                     <div key={index}>{el.message}</div>
