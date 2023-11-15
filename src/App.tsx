@@ -79,9 +79,9 @@ function App() {
 
             <div className={'hwTitle'}>React-deap #6</div>
             <div className={'hw'}>
-                <OnOff value = {true} />
-                <OnOff value = {false} />
-                <OnOff value = {true} />
+                <OnOff  />
+                <OnOff  />
+                <OnOff  />
             </div>
         </div>
     );
