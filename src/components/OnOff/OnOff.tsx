@@ -5,28 +5,46 @@ type OnOffPropsType = {
     value: boolean
 }
 
+
+
 function OnOff (props:OnOffPropsType) {
+
+    const onStyle ={
+        width: "30px",
+        height: "20px",
+        border:"1px solid black",
+        display:"inline-block",
+        padding:"2px",
+        backgroundColor:props.value ? "green" : " white"
+    }
+    const offStyle ={
+        width: "30px",
+        height: "20px",
+        border:"1px solid black",
+        display:"inline-block",
+        marginLeft:"2px",
+        padding:"2px",
+        backgroundColor:props.value ? "white" : " red"
+    }
+    const indicatorStyle ={
+        width: "10px",
+        height: "10px",
+        borderRadius: "5px",
+        border:"1px solid black",
+        display:"inline-block",
+        marginLeft:"5px",
+        backgroundColor:props.value ? "green" : " red"
+    };
+
+
     return <div>
-        {props.value && <ChOn/>}
-        {props.value && <ChOff/>}
-        {props.value && <ChOff/>}
+        <div style={onStyle}>on</div>
+        <div style={offStyle}>off</div>
+        <div style={indicatorStyle}></div>
     </div>
 }
 
-function ChOn(){
-    return <div>
-        <span className={s.wrapperOn}>on</span>
-        <span className={s.wrapper}>off</span>
-        <span className={s.circleOn}>off</span>
-    </div>
-}
-function ChOff(){
-    return <div>
-        <span className={s.wrapper}>on</span>
-        <span className={s.wrapperOff}>off</span>
-        <span className={s.circleOff}>off</span>
-    </div>
-}
+
 
 
 
