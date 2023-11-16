@@ -8,6 +8,7 @@ import {ButtonClick} from "./components/MicroTasks/MicroTaskButton";
 import {State} from "./components/MicroTasks/UseState";
 import {Money} from "./components/MicroTasks/ArrayMoneyUseState";
 import {MicroTaskInput} from "./components/MicroTasks/MicroTaskInput";
+import UncontrolledAccordion from "./components/UnControlledAccordion/UncontrolledAccordion";
 
 
 
@@ -78,10 +79,16 @@ function App() {
             </div>
 
             <div className={'hwTitle'}>React-deap #6</div>
-            <div className={'hw'}>
-                <OnOff  />
-                <OnOff  />
-                <OnOff  />
+            <div className={'desk'}>
+               <div className={'hw'}>
+                   <OnOff  />
+                   <OnOff  />
+                   <OnOff  />
+               </div>
+                <div className={'hw'}>
+                   <UncontrolledAccordion titleValue = {"Menu"}/>
+                   <UncontrolledAccordion titleValue = {"Users"}/>
+               </div>
             </div>
         </div>
     );

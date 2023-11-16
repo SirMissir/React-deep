@@ -21,11 +21,20 @@
 .App {
     --header_height: 60px;
 }
+.desk{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    padding-bottom: 200px;
+    border-top: 20px;
+}
 .hw {
     display: flex;
     flex-direction: column;
     gap: 10px;
     width: 100%;
+    padding-top: 20px;
     padding-bottom: 200px;
     border-bottom: 1px solid #d3d3d3;
     border-top: 1px solid #d3d3d3;
