@@ -9,6 +9,7 @@ import {State} from "./components/MicroTasks/UseState";
 import {Money} from "./components/MicroTasks/ArrayMoneyUseState";
 import {MicroTaskInput} from "./components/MicroTasks/MicroTaskInput";
 import UncontrolledAccordion from "./components/UnControlledAccordion/UncontrolledAccordion";
+import {UnControlledRating} from "./components/UnControlledRating/UnControlledRating";
 
 
 
@@ -43,14 +44,28 @@ function App() {
             </div>
 
             <div className={'hwTitle'}>React-deap #2</div>
-            <div className={'hw'}>
-                <Rating value = {3}/>
-                <Rating value = {0}/>
-                <Rating value = {1}/>
-                <Rating value = {2}/>
-                <Rating value = {3}/>
-                <Rating value = {4}/>
-                <Rating value = {5}/>
+            <div className={'desk'}>
+                <div className={'hw'}>
+                    <Rating value = {3}/>
+                    <Rating value = {0}/>
+                    <Rating value = {1}/>
+                    <Rating value = {2}/>
+                    <Rating value = {3}/>
+                    <Rating value = {4}/>
+                    <Rating value = {5}/>
+                </div>
+                <div className={'hw'}>
+                    <UnControlledRating/>
+                    <UnControlledRating/>
+                    <UnControlledRating/>
+                    <UnControlledRating/>
+                    <UnControlledRating/>
+                    <UnControlledRating/>
+                    <UnControlledRating/>
+
+                </div>
+
+
             </div>
 
             <div className={'hwTitle'}>MicroTasks #1</div>
