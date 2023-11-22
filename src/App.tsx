@@ -33,14 +33,16 @@ function App() {
         {manufacturer:'Audi', model:'rs6'}
     ];
 
+    let [accordionCollapsed, setAccordionCollapsed]= useState<boolean>(false)
+
     console.log("App rendered")
     return (
         <div className={'App'}>
 
             <div className={'hwTitle'}>React-deap #1</div>
             <div className={'hw'}>
-                <Accordion titleValue = {"Menu"} collapsed = {true}/>
-                <Accordion titleValue = {"Users List"} collapsed = {false}/>
+                <Accordion titleValue = {"Menu"} collapsed = {accordionCollapsed} onChange={() => {setAccordionCollapsed(!accordionCollapsed)}}/>
+                <Accordion titleValue = {"Users List"} collapsed = {accordionCollapsed} onChange={() => {setAccordionCollapsed(!accordionCollapsed)}}/>
             </div>
 
             <div className={'hwTitle'}>React-deap #2</div>
