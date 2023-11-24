@@ -10,6 +10,7 @@ import {Money} from "./components/MicroTasks/ArrayMoneyUseState";
 import {MicroTaskInput} from "./components/MicroTasks/MicroTaskInput";
 import UncontrolledAccordion from "./components/UnControlledAccordion/UncontrolledAccordion";
 import {UnControlledRating} from "./components/UnControlledRating/UnControlledRating";
+import UncontrolledOnOff from "./components/UncontrolledOnOff/UncontrolledOnOff";
 
 
 
@@ -32,15 +33,29 @@ function App() {
         {manufacturer:'Mercedes', model:'e63s'},
         {manufacturer:'Audi', model:'rs6'}
     ];
-
     let [accordionCollapsed, setAccordionCollapsed]= useState<boolean>(false)
+    let [switchOn, setSwitchOn] = useState<boolean>(false)
+    let [h, seth] = useState(false);
+    let nawBarStyle = {
+        height: h ? "200px" : "0px"
+    }
+    // const NawBarStyle = {
+    //     display: "flex",
+    //     flex-direction: "column",
+    //     gap: "10px",
+    //     width: "100%",
+    //     padding-top: "20px",
+    //     padding-bottom: "100px",
+    //     border-bottom: "1px solid #d3d3d3",
+    //     border-top: "1px solid #d3d3d3"
+    // };
 
-    console.log("App rendered")
+
     return (
         <div className={'App'}>
 
-            <div className={'hwTitle'}>React-deap #1</div>
-            <div className={'hw'}>
+            <div className={'hwTitle'} onClick={()=>seth(!h)} >React-deap #1</div>
+            <div style={nawBarStyle} className={'hw'}>
                 <Accordion titleValue = {"Menu"} collapsed = {accordionCollapsed} onChange={() => {setAccordionCollapsed(!accordionCollapsed)}}/>
                 <Accordion titleValue = {"Users List"} collapsed = {accordionCollapsed} onChange={() => {setAccordionCollapsed(!accordionCollapsed)}}/>
             </div>
@@ -105,6 +120,13 @@ function App() {
                 <div className={'hw'}>
                    <UncontrolledAccordion titleValue = {"Menu"}/>
                    <UncontrolledAccordion titleValue = {"Users"}/>
+               </div>
+            </div>
+
+            <div className={'hwTitle'}>React-deap #8</div>
+            <div className={'desk'}>
+               <div className={'hw'}>
+                   <UncontrolledOnOff  on={switchOn} onChange={setSwitchOn} />
                </div>
             </div>
         </div>
