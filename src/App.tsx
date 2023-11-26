@@ -11,6 +11,7 @@ import {MicroTaskInput} from "./components/MicroTasks/MicroTaskInput";
 import UncontrolledAccordion from "./components/UnControlledAccordion/UncontrolledAccordion";
 import {UnControlledRating} from "./components/UnControlledRating/UnControlledRating";
 import UncontrolledOnOff from "./components/UncontrolledOnOff/UncontrolledOnOff";
+import Count from "./components/Count/Count";
 
 
 
@@ -108,6 +109,7 @@ function App() {
             <div className={'hwTitle'}>MicroTasks #2</div>
             <div className={'hw'}>
                 <MicroTaskInput/>
+                <State />
             </div>
 
             <div className={'hwTitle'}>React-deap #6</div>
@@ -127,6 +129,13 @@ function App() {
             <div className={'desk'}>
                <div className={'hw'}>
                    <UncontrolledOnOff  on={switchOn} onChange={setSwitchOn} />
+               </div>
+            </div>
+
+            <div className={'hwTitle'}>Counter Home</div>
+            <div className={'desk'}>
+               <div className={'hw'}>
+                   <Count/>
                </div>
             </div>
         </div>

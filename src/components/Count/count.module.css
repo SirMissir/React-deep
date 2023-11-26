@@ -1,0 +1,22 @@
+.wrapper{
+    display: flex;
+    justify-content: center;
+}
+.count{
+    display: flex;
+    height: 200px;
+    width: 200px;
+    flex-wrap: wrap;
+    border: 1px solid aquamarine;
+}
+.disp{
+    display: flex;
+    height: 50%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.butt{
+    height: 50%;
+    width: 50%;
+}
